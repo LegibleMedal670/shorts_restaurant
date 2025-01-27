@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:video_player/video_player.dart';
 
 class ShortVideoWidget extends StatefulWidget {
@@ -68,25 +70,40 @@ class _ShortVideoWidgetState extends State<ShortVideoWidget> {
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         color: Colors.black,
-        child: Stack(
-          alignment: Alignment.center,
+        child: Column(
           children: [
-            VideoPlayer(_playerController),
-            AnimatedOpacity(
-              opacity: _iconOpacity,
-              duration: const Duration(milliseconds: 300),
-              curve: Curves.easeInOutCirc,
-              child: Container(
-                padding: const EdgeInsets.all(15),
-                decoration: const BoxDecoration(
-                  color: Colors.black54,
-                  shape: BoxShape.circle,
-                ),
-                child: Icon(
-                  _currentIcon,
-                  color: Colors.white,
-                  size: 50.0,
-                ),
+            Expanded(
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  VideoPlayer(_playerController),
+                  AnimatedOpacity(
+                    opacity: _iconOpacity,
+                    duration: const Duration(milliseconds: 300),
+                    curve: Curves.easeInOutCirc,
+                    child: Container(
+                      padding: const EdgeInsets.all(15),
+                      decoration: const BoxDecoration(
+                        color: Colors.black54,
+                        shape: BoxShape.circle,
+                      ),
+                      child: Icon(
+                        _currentIcon,
+                        color: Colors.white,
+                        size: 50.0,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            VideoProgressIndicator(
+              _playerController,
+              allowScrubbing: true, // 스크럽 허용
+              // padding: EdgeInsets.only(top: 5.0),
+              colors: VideoProgressColors(
+                playedColor: Colors.red, // 재생된 부분 색상
+                bufferedColor: Colors.grey, // 버퍼링된 부분 색상
               ),
             ),
           ],

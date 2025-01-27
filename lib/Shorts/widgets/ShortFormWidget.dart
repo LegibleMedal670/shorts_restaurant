@@ -64,7 +64,7 @@ class ShortFormWidget extends StatelessWidget {
         ),
         Positioned(
           right: 15,
-          bottom: 30,
+          bottom: 5,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -88,7 +88,7 @@ class ShortFormWidget extends StatelessWidget {
         ),
         Positioned(
           left: 25,
-          bottom: 45,
+          bottom: 5,
           child: Container(
             width: MediaQuery.of(context).size.width,
             child: Row(

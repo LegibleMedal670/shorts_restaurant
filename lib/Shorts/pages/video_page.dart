@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:shorts_restaurant/Shorts/widgets/ShortFormWidget.dart';
+import 'package:shorts_restaurant/Widgets/BottomNavBar.dart';
 
 class VideoPage extends StatefulWidget {
   const VideoPage({super.key});
@@ -55,72 +56,78 @@ class _VideoPageState extends State<VideoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.black,
-        body: FutureBuilder(
-          future: tempFuture(),
-          builder: (context, snapshot) {
+      backgroundColor: Colors.black,
+      body: Column(
+        children: [
+          Expanded(
+            child: FutureBuilder(
+              future: tempFuture(),
+              builder: (context, snapshot) {
+                if (snapshot.hasError) {
+                  return ShimmerWidget(mode: 'error');
+                }
 
-            if (snapshot.hasError) {
-              return ShimmerWidget(mode: 'error');
-            }
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return ShimmerWidget(mode: 'loading');
+                }
 
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return ShimmerWidget(mode: 'loading');
-            }
+                List<Map<String, dynamic>> data = snapshot.data!;
 
-            List<Map<String, dynamic>> data = snapshot.data!;
+                return PageView.builder(
+                  scrollDirection: Axis.vertical,
+                  itemCount: data.length,
+                  itemBuilder: (context, index) {
+                    Map<String, dynamic> shortFormData = data[index];
 
-            return PageView.builder(
-              scrollDirection: Axis.vertical,
-              itemCount: data.length,
-              itemBuilder: (context, index) {
-                Map<String, dynamic> shortFormData = data[index];
-
-                return ShortFormWidget(
-                  storeName: shortFormData['storeName'],
-                  videoURL: shortFormData['videoURL'],
-                  storeProfileImage: shortFormData['storeProfileImage'],
-                  storeCaption: shortFormData['storeCaption'],
-                  storeLocation: shortFormData['storeLocation'],
-                  bookmarkAmount: shortFormData['bookmarkAmount'],
-                  shareAmount: shortFormData['shareAmount'],
-                  reviewAmount: shortFormData['reviewAmount'],
+                    return ShortFormWidget(
+                      storeName: shortFormData['storeName'],
+                      videoURL: shortFormData['videoURL'],
+                      storeProfileImage: shortFormData['storeProfileImage'],
+                      storeCaption: shortFormData['storeCaption'],
+                      storeLocation: shortFormData['storeLocation'],
+                      bookmarkAmount: shortFormData['bookmarkAmount'],
+                      shareAmount: shortFormData['shareAmount'],
+                      reviewAmount: shortFormData['reviewAmount'],
+                    );
+                  },
                 );
               },
-            );
-
-          },
-        ));
+            ),
+          ),
+          BottomNavBar(context, 'shorts'),
+        ],
+      ),
+    );
   }
 
   Widget ShimmerWidget({String mode = 'loading'}) {
     return Stack(
       children: [
         if (mode == 'error')
-        const Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'Something went wrong',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20
+          const Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Something went wrong',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20),
                 ),
-              ),
-              SizedBox(height: 30,),
-              Text(
-                'Restart App',
-                style: TextStyle(
-                    color: Colors.white,
-                    // fontWeight: FontWeight.bold,
-                    fontSize: 18
+                SizedBox(
+                  height: 30,
                 ),
-              ),
-            ],
+                Text(
+                  'Restart App',
+                  style: TextStyle(
+                      color: Colors.white,
+                      // fontWeight: FontWeight.bold,
+                      fontSize: 18),
+                ),
+              ],
+            ),
           ),
-        ),
         Shimmer.fromColors(
           baseColor: Colors.grey[700] as Color,
           highlightColor: Colors.grey[800]!.withOpacity(0.8),
@@ -128,7 +135,7 @@ class _VideoPageState extends State<VideoPage> {
             children: [
               Positioned(
                 right: 15,
-                bottom: 30,
+                bottom: 15,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -148,7 +155,7 @@ class _VideoPageState extends State<VideoPage> {
               ),
               Positioned(
                 left: 25,
-                bottom: 65,
+                bottom: 23,
                 child: Container(
                   width: MediaQuery.of(context).size.width,
                   child: Row(
