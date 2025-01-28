@@ -208,7 +208,7 @@ class _VideoPageState extends State<VideoPage> {
 
   Widget ShimmerIcon() {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 14),
+      padding: const EdgeInsets.symmetric(vertical: 10),
       child: Column(
         children: [
           CircleAvatar(

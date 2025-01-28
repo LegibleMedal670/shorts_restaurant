@@ -104,13 +104,13 @@ class ShortFormWidget extends StatelessWidget {
                           // backgroundImage: NetworkImage(widget.storeProfileImage)
                         ),
                         SizedBox(
-                          width: 13,
+                          width: 10,
                         ),
                         Text(
                           storeName,
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: 17,
+                              fontSize: 14,
                               color: Colors.white),
                         ),
                         SizedBox(
@@ -140,9 +140,20 @@ class ShortFormWidget extends StatelessWidget {
                     SizedBox(
                       height: 17,
                     ),
-                    Text(
-                      storeCaption,
-                      style: TextStyle(fontSize: 16, color: Colors.white),
+                    GestureDetector(
+                      onTap: () {
+                        showModalPopUp(context);
+                      },
+                      child: Container(
+                        width: MediaQuery.of(context).size.width * 0.8,
+                        color: Colors.transparent,
+                        child: Text(
+                          storeCaption,
+                          style: TextStyle(fontSize: 16, color: Colors.white),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
                     ),
                     SizedBox(
                       height: 17,
@@ -157,6 +168,140 @@ class ShortFormWidget extends StatelessWidget {
     );
   }
 
+  void showModalPopUp(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      enableDrag: true,
+      showDragHandle: true,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(20.0),
+          topRight: Radius.circular(20.0),
+        ),
+      ),
+      builder: (BuildContext context) {
+        return DraggableScrollableSheet(
+            maxChildSize: 0.9,
+            initialChildSize: 0.4,
+            minChildSize: 0.3999,
+            expand: false,
+            snap: true,
+            snapSizes: const [0.4, 0.9],
+            builder: (context, scrollController) => SizedBox(
+              width: MediaQuery.of(context).size.width,
+              child: SingleChildScrollView(
+                // physics: const ClampingScrollPhysics(),
+                controller: scrollController,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 14),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Text(
+                            '음식점이름',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black
+                            ),
+                          ),
+                          SizedBox(width: 15,),
+                          Text(
+                            '음식점유형',
+                            style: TextStyle(
+                              color: Colors.black54
+                            ),
+                          ),
+                          SizedBox(width: 15,),
+                          Text(
+                            '거리',
+                            style: TextStyle(
+                                color: Colors.black54
+                            ),
+                          ),
+                          Spacer(
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(right: 10),
+                            padding: EdgeInsets.all(5),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              border: Border.all(color: Colors.black, width: 0.5)
+                            ),
+                            child: Text('북마크'),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 25,),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Container(
+                            width: MediaQuery.of(context).size.width * 0.28,
+                            height: MediaQuery.of(context).size.width * 0.28,
+                            decoration: BoxDecoration(
+                              color: Colors.black26,
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                          ),
+                          Container(
+                            width: MediaQuery.of(context).size.width * 0.28,
+                            height: MediaQuery.of(context).size.width * 0.28,
+                            decoration: BoxDecoration(
+                              color: Colors.black26,
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                          ),
+                          Container(
+                            width: MediaQuery.of(context).size.width * 0.28,
+                            height: MediaQuery.of(context).size.width * 0.28,
+                            decoration: BoxDecoration(
+                              color: Colors.black26,
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 25,),
+                      Container(
+                        width: MediaQuery.of(context).size.width,
+                        height: 30,
+                        decoration: BoxDecoration(
+                          color: Colors.black26,
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      ),
+                      SizedBox(height: 15,),
+                      Container(
+                        width: MediaQuery.of(context).size.width,
+                        height: 30,
+                        decoration: BoxDecoration(
+                          color: Colors.black26,
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      ),
+                      SizedBox(height: 15,),
+                      Container(
+                        width: MediaQuery.of(context).size.width,
+                        height: 30,
+                        decoration: BoxDecoration(
+                          color: Colors.black26,
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      ),
+                      SizedBox(height: 15,),
+                    ],
+                  ),
+                ),
+              ),
+            )
+        );
+      },
+    );
+  }
+
   Widget ItemButton({IconData icon = Icons.bookmark, int? amount}) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 14),
@@ -164,7 +309,7 @@ class ShortFormWidget extends StatelessWidget {
         children: [
           Icon(
             icon,
-            size: 43,
+            size: 35,
             color: Colors.white,
           ),
           SizedBox(

@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:video_player/video_player.dart';
 
 class ShortVideoWidget extends StatefulWidget {
@@ -100,8 +98,7 @@ class _ShortVideoWidgetState extends State<ShortVideoWidget> {
             VideoProgressIndicator(
               _playerController,
               allowScrubbing: true, // 스크럽 허용
-              // padding: EdgeInsets.only(top: 5.0),
-              colors: VideoProgressColors(
+              colors: const VideoProgressColors(
                 playedColor: Colors.red, // 재생된 부분 색상
                 bufferedColor: Colors.grey, // 버퍼링된 부분 색상
               ),

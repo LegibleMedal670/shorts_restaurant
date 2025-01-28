@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shorts_restaurant/Shorts/pages/video_page.dart';
+import 'package:shorts_restaurant/Shorts/pages/VideoPage.dart';
 
 
 class SplashScreen extends StatefulWidget {
