@@ -13,11 +13,11 @@ class VideoPage extends StatefulWidget {
 class _VideoPageState extends State<VideoPage> {
   List<Map<String, dynamic>> tempData = [
     {
-      'storeName': '음식점1',
+      'storeName': 'Mc Donalds',
       'videoURL':
           'https://pub-f3e1c8748b25400eb916055e6f657e4e.r2.dev/video_1.mp4',
       'storeProfileImage': '',
-      'storeCaption': '음식점 1 영상입니다 안녕하세요 ~~',
+      'storeCaption': 'Come and eat the most delicious burgers you\'ll ever eat! for 4.99\$',
       'storeLocation': '음식점위치1',
       'shareAmount': 123,
       'reviewAmount': 412,
@@ -56,6 +56,7 @@ class _VideoPageState extends State<VideoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.black,
       body: Column(
         children: [
