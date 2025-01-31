@@ -44,6 +44,50 @@ class _VideoPageState extends State<VideoPage> {
       'shareAmount': 123,
       'reviewAmount': 412,
       'bookmarkAmount': 118,
+    },
+    {
+      'storeName': 'Location Shorts',
+      'videoURL':
+      'https://pub-f3e1c8748b25400eb916055e6f657e4e.r2.dev/video_4.mp4',
+      'storeProfileImage': 'https://preview.redd.it/albert-camus-french-writer-in-1947-v0-ks34coywa1pb1.png?width=640&crop=smart&auto=webp&s=3608d8c1c4d56ac96b609e0fbefc738a84ed740e',
+      'storeCaption': 'Come and eat the most delicious burgers you\'ll ever eat! for 4.99\$',
+      'storeLocation': '음식점위치4',
+      'shareAmount': 123,
+      'reviewAmount': 412,
+      'bookmarkAmount': 118,
+    },
+    {
+      'storeName': 'Location Shorts',
+      'videoURL':
+      'https://pub-f3e1c8748b25400eb916055e6f657e4e.r2.dev/video_5.mp4',
+      'storeProfileImage': 'https://preview.redd.it/albert-camus-french-writer-in-1947-v0-ks34coywa1pb1.png?width=640&crop=smart&auto=webp&s=3608d8c1c4d56ac96b609e0fbefc738a84ed740e',
+      'storeCaption': 'Come and eat the most delicious burgers you\'ll ever eat! for 4.99\$',
+      'storeLocation': '음식점위치4',
+      'shareAmount': 527,
+      'reviewAmount': 412,
+      'bookmarkAmount': 218,
+    },
+    {
+      'storeName': 'Location Shorts',
+      'videoURL':
+      'https://pub-f3e1c8748b25400eb916055e6f657e4e.r2.dev/video_6.mp4',
+      'storeProfileImage': 'https://preview.redd.it/albert-camus-french-writer-in-1947-v0-ks34coywa1pb1.png?width=640&crop=smart&auto=webp&s=3608d8c1c4d56ac96b609e0fbefc738a84ed740e',
+      'storeCaption': 'The most satisfying icecream cake for only \$9.99',
+      'storeLocation': '음식점위치4',
+      'shareAmount': 872,
+      'reviewAmount': 613,
+      'bookmarkAmount': 463,
+    },
+    {
+      'storeName': 'Location Shorts',
+      'videoURL':
+      'https://pub-f3e1c8748b25400eb916055e6f657e4e.r2.dev/video_7.mp4',
+      'storeProfileImage': 'https://preview.redd.it/albert-camus-french-writer-in-1947-v0-ks34coywa1pb1.png?width=640&crop=smart&auto=webp&s=3608d8c1c4d56ac96b609e0fbefc738a84ed740e',
+      'storeCaption': 'Golden-crisp cutlets, bursting with flavor—your perfect bite awaits!',
+      'storeLocation': '음식점위치4',
+      'shareAmount': 672,
+      'reviewAmount': 471,
+      'bookmarkAmount': 264,
     }
   ];
 

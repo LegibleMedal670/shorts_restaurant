@@ -80,7 +80,6 @@ class _ShortFormWidgetState extends State<ShortFormWidget> {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-
         GestureDetector(
           onTap: (){
             _toggleVideo();
@@ -121,9 +120,10 @@ class _ShortFormWidgetState extends State<ShortFormWidget> {
                 ),
                 VideoProgressIndicator(
                   _playerController,
+                  padding: EdgeInsets.zero,
                   allowScrubbing: true, // 스크럽 허용
                   colors: const VideoProgressColors(
-                      playedColor: Colors.red, // 재생된 부분 색상
+                      playedColor: Color.fromRGBO(220, 20, 60, 1), // 재생된 부분 색상
                       bufferedColor: Colors.grey, // 버퍼링된 부분 색상
                       backgroundColor: Colors.grey
                   ),
@@ -219,7 +219,7 @@ class _ShortFormWidgetState extends State<ShortFormWidget> {
                     CircleAvatar(
                       radius: 20,
                       backgroundColor: Colors.white,
-                      // backgroundImage: NetworkImage(storeProfileImage)
+                      // backgroundImage: NetworkImage('https://img.freepik.com/free-photo/handsome-man-smiling-happy-face-portrait-close-up_53876-145493.jpg')
                     ),
                     SizedBox(
                       width: 10,
@@ -319,7 +319,7 @@ class _ShortFormWidgetState extends State<ShortFormWidget> {
                     children: [
                       Icon(
                         Icons.pin_drop_outlined,
-                        color: Colors.black,
+                        color: Colors.white,
                       ),
                       SizedBox(
                         width: 6,
@@ -329,12 +329,12 @@ class _ShortFormWidgetState extends State<ShortFormWidget> {
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 15,
-                            color: Colors.black),
+                            color: Colors.white),
                       ),
                     ],
                   ),
                   decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.black.withOpacity(0.4),
                       borderRadius: BorderRadius.circular(18),
                       border: Border.all(width: 0.5, color: Colors.white)),
                 ),
@@ -347,22 +347,22 @@ class _ShortFormWidgetState extends State<ShortFormWidget> {
                     children: [
                       Icon(
                         Icons.restaurant_outlined,
-                        color: Colors.black,
+                        color: Colors.white,
                       ),
                       SizedBox(
                         width: 6,
                       ),
                       Text(
-                        'Food:Burger',
+                        'Food:Burgers',
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 15,
-                            color: Colors.black),
+                            color: Colors.white),
                       ),
                     ],
                   ),
                   decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.black.withOpacity(0.4),
                       borderRadius: BorderRadius.circular(18),
                       border: Border.all(width: 0.5, color: Colors.white)),
                 ),
