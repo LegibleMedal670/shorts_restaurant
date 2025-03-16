@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "866128814740",
+    "project_id": "shortsmap-1",
+    "storage_bucket": "shortsmap-1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:866128814740:android:a3a1405e9ebb2bccbdca81",
+        "android_client_info": {
+          "package_name": "com.example.shorts_restaurant"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCII5flAtQpIt-q5k4TqdN-38qzQUZ4Ac4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
