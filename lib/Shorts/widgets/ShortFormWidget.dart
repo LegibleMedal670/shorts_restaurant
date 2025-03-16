@@ -121,9 +121,9 @@ class _ShortFormWidgetState extends State<ShortFormWidget> {
                 children: [
                   // 타이틀
                   Text(
-                    'Find Osaka Restaurant On App',
+                    '앱에서 홍대 맛집도 찾아보세요!',
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 18,
                       fontWeight: FontWeight.bold,
                       color: Colors.black87,
                     ),
@@ -156,11 +156,11 @@ class _ShortFormWidgetState extends State<ShortFormWidget> {
                                   )));
                     },
                     child: Container(
-                      width: 190,
+                      width: 150,
                       // height: 85,
                       color: Colors.white,
                       child: Image.asset(
-                        'images/playstore_jp.png',
+                        'images/playstore.png',
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -192,10 +192,10 @@ class _ShortFormWidgetState extends State<ShortFormWidget> {
                                   )));
                     },
                     child: Container(
-                      width: 190,
-                      height: 85,
+                      width: 170,
+                      // height: 95,
                       color: Colors.white,
-                      child: SvgPicture.asset('images/appstore_jp.svg'),
+                      child: SvgPicture.asset('images/appstore.svg',),
                     ),
                   ),
                   const SizedBox(height: 10),
@@ -224,7 +224,7 @@ class _ShortFormWidgetState extends State<ShortFormWidget> {
                       Navigator.pop(context);
                     },
                     child: Text(
-                      'I\'ll just keep looking web',
+                      '그냥 웹에서 볼게요',
                       style: TextStyle(
                         color: Colors.grey[500],
                         fontWeight: FontWeight.bold,
