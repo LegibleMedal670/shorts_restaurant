@@ -75899,8 +75899,8 @@ $0(){var s=this.a
 s.TJ(0,s.a.at)},
 $S:30}
 A.ai4.prototype={
-$1(a){var s=null,r=A.i2(15),q=A.jx("Find Osaka Restaurant On App",s,s,A.ex(s,s,B.C,s,s,s,s,s,s,s,s,20,s,s,B.aO,s,s,!0,s,s,s,s,s,s,s,s)),p=this.a,o=A.ja(s,A.ct(s,A.a2z("images/playstore_jp.png",B.jT),B.p,B.i,s,s,s,s,s,s,s,s,190),B.ad,!1,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,new A.ai1(p,a),s,s,s)
-return new A.qf(A.at8(A.i5(A.a([q,B.iU,o,A.ja(s,A.ct(s,new A.Mu(new A.AB("images/appstore_jp.svg",s,s,s,s),s,s),B.p,B.i,s,s,s,85,s,s,s,s,190),B.ad,!1,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,new A.ai2(p,a),s,s,s),B.iU,new A.H2(1,B.c9,s),B.iU,new A.MD(new A.ai3(p,a),s,s,s,s,B.p,s,!1,s,!0,A.jx("I'll just keep looking web",s,s,A.ex(s,s,B.h8,s,s,s,s,s,s,s,s,12,s,s,B.aO,s,s,!0,s,s,s,s,s,s,s,s)),s)],t.F),B.a7,B.a9,B.eB)),B.i,new A.co(r,B.q),s)},
+$1(a){var s=null,r=A.i2(15),q=A.jx("\uc571\uc5d0\uc11c \ud64d\ub300 \ub9db\uc9d1\ub3c4 \ucc3e\uc544\ubcf4\uc138\uc694!",s,s,A.ex(s,s,B.C,s,s,s,s,s,s,s,s,18,s,s,B.aO,s,s,!0,s,s,s,s,s,s,s,s)),p=this.a,o=A.ja(s,A.ct(s,A.a2z("images/playstore.png",B.jT),B.p,B.i,s,s,s,s,s,s,s,s,150),B.ad,!1,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,new A.ai1(p,a),s,s,s)
+return new A.qf(A.at8(A.i5(A.a([q,B.iU,o,A.ja(s,A.ct(s,new A.Mu(new A.AB("images/appstore.svg",s,s,s,s),s,s),B.p,B.i,s,s,s,s,s,s,s,s,170),B.ad,!1,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,new A.ai2(p,a),s,s,s),B.iU,new A.H2(1,B.c9,s),B.iU,new A.MD(new A.ai3(p,a),s,s,s,s,B.p,s,!1,s,!0,A.jx("\uadf8\ub0e5 \uc6f9\uc5d0\uc11c \ubcfc\uac8c\uc694",s,s,A.ex(s,s,B.h8,s,s,s,s,s,s,s,s,12,s,s,B.aO,s,s,!0,s,s,s,s,s,s,s,s)),s)],t.F),B.a7,B.a9,B.eB)),B.i,new A.co(r,B.q),s)},
 $S:455}
 A.ai1.prototype={
 $0(){var s,r,q,p=this.a,o=p.d
